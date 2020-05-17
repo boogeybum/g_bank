@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=\, initial-scale=1.0">
+  
+  <link rel="stylesheet" media="all" href="../stylesheets/staff.css">
+  
   <title>GBI</title>
 </head>
 <body>
@@ -17,6 +20,8 @@
       </li>
     </ul>
   </nav>
+
+  <div class="content"></div>
 
   <footer>
     &copy; G_BANK <?php echo date('Y'); ?>
