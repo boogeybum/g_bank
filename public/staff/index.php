@@ -1,32 +1,7 @@
 <?php require_once('../../private/initialize.php'); ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=\, initial-scale=1.0">
-  
-  <link rel="stylesheet" media="all" href="../stylesheets/staff.css">
-  
-  <title>GBI</title>
-</head>
-<body>
-  <header>
-    <h1>GBI Staff Area</h1>
-  </header>
+<?php include('../../private/shared/staff_header.php'); ?>
 
-  <nav>
-    <ul>
-      <li>
-        <a href="index.php">Menu</a>
-      </li>
-    </ul>
-  </nav>
+<div id="content"></div>
 
-  <div id="content"></div>
-
-  <footer>
-    &copy; G_BANK <?php echo date('Y'); ?>
-  </footer>
-</body>
-</html>
+<?php include('../../private/shared/staff_footer.php'); ?>
