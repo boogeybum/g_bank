@@ -21,7 +21,7 @@
     </ul>
   </nav>
 
-  <div class="content"></div>
+  <div id="content"></div>
 
   <footer>
     &copy; G_BANK <?php echo date('Y'); ?>
