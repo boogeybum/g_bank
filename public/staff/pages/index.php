@@ -1,15 +1,27 @@
 <?php require_once('../../../private/initialize.php'); ?>
 
-<!-- list of $pages -->
+<!-- dummy list of $pages -->
+<?php
+  $pages = [
+    ['id' => '1', 'position' => '1', 'visible' => '1', 'menu_name' => 'About Globe Bank'],
+    ['id' => '2', 'position' => '2', 'visible' => '1', 'menu_name' => 'Consumer'],
+    ['id' => '3', 'position' => '3', 'visible' => '1', 'menu_name' => 'SMall Business'],
+    ['id' => '4', 'position' => '4', 'visible' => '1', 'menu_name' => 'Commercial']
+  ];
+?>
 
 <?php $page_title = 'Pages'; ?>
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
 <div id="content">
-  <div class="pages">
+  <div class="pages listing">
     <h1>Pages</h1>
 
-  <table>
+    <div class="actions">
+      <a href="" class="action">Create New Page</a>
+    </div>
+
+  <table class="list">
     <tr>
       <th>ID</th>
       <th>Position</th>
@@ -20,7 +32,18 @@
       <th>&nbsp;</th>
     </tr>
     
-    <!-- insert foreach() to loop through pages -->
+    <!-- create table of pages from dummy list above -->
+    <?php foreach($pages as $page) { ?>
+      <tr>
+        <td><?php echo $page['id']; ?></td>
+        <td><?php echo $page['position']; ?></td>
+        <td><?php echo $page['visible'] == 1 ? 'true' : 'false'; ?></td>
+        <td><?php echo $page['menu_name']; ?></td>
+        <td><a clase="action" href="<?php echo url_for('/staff/pages/show.php?id=' . $page['id']); ?>">View</a></td>
+        <td><a href="" class="action">Edit</a></td>
+        <td><a href="" class="action">Delete</a></td>
+      </tr>
+    <?php } ?>
 
   </table>
   </div>
