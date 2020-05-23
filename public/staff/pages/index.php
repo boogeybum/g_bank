@@ -35,11 +35,11 @@
     <!-- create table of pages from dummy list above -->
     <?php foreach($pages as $page) { ?>
       <tr>
-        <td><?php echo $page['id']; ?></td>
-        <td><?php echo $page['position']; ?></td>
+        <td><?php echo h($page['id']); ?></td>
+        <td><?php echo h($page['position']); ?></td>
         <td><?php echo $page['visible'] == 1 ? 'true' : 'false'; ?></td>
-        <td><?php echo $page['menu_name']; ?></td>
-        <td><a clase="action" href="<?php echo url_for('/staff/pages/show.php?id=' . $page['id']); ?>">View</a></td>
+        <td><?php echo h($page['menu_name']); ?></td>
+        <td><a clase="action" href="<?php echo url_for('/staff/pages/show.php?id=' . h(u($page['id']))); ?>">View</a></td>
         <td><a href="" class="action">Edit</a></td>
         <td><a href="" class="action">Delete</a></td>
       </tr>
