@@ -19,10 +19,12 @@
   echo h($id);
   ?>
 
-  <!-- strings for demonstrating urlencode use cases -->
-  <a href="show.php?name=<?php echo u('John Doe'); ?>">Link</a><br>
-  <a href="show.php?company=<?php echo u('Widgets&More'); ?>">Link</a><br>
-  <a href="show.php?query=<?php echo u('!#*?'); ?>">Link</a><br>
+  <div>
+    <!-- strings for demonstrating urlencode use cases -->
+    <a href="show.php?name=<?php echo u('John Doe'); ?>">Link</a><br>
+    <a href="show.php?company=<?php echo u('Widgets&More'); ?>">Link</a><br>
+    <a href="show.php?query=<?php echo u('!#*?'); ?>">Link</a><br>
+  </div>
 
 </div>
 
