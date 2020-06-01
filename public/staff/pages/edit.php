@@ -34,10 +34,10 @@ if(is_post_request()) {
   <div class="page edit">
   <h1>Edit Page</h1>
 
-    <form action="<?php echo url_for('/staff/pages/edit.php?id=1'); ?>" method="post">
+    <form action="<?php echo url_for('/staff/pages/edit.php?id=' . h(u($id))); ?>" method="post">
       <dl>
         <dt>Page Name</dt>
-        <dd><input type="text" name="menu_name" value=""></dd>
+        <dd><input type="text" name="menu_name" value="<?php echo $menu_name; ?>"></dd>
       </dl>
       <dl>
         <dt>Position</dt>
