@@ -2,6 +2,25 @@
 
 require_once('../../../private/initialize.php');
 
+// $id = $_GET['id']; no id yet assigned
+$menu_name = $_GET['menu_name'];
+$position = '';
+$visible = '';
+
+if(is_post_request()) {
+
+  // Handle form values sent by new.php
+
+  $menu_name = $_POST['menu_name'] ?? '';
+  $position = $_POST['position'] ?? '';
+  $visible = $_POST['visible'] ?? '';
+
+  echo "Form parameters<br />";
+  echo "Page name: " . $menu_name . "<br />";
+  echo "Position: " . $position . "<br />";
+  echo "Visible: " . $visible . "<br />";
+}
+
 ?>
 
 <?php $page_title = 'Create Page'; ?>
@@ -13,10 +32,10 @@ require_once('../../../private/initialize.php');
   <div class="page new">
     <h1>Create Page</h1>
 
-    <form action="" method="post">
+    <form action="<?php echo url_for('/staff/pages/new.php'); ?>" method="post">
       <dl>
         <dt>Page Name</dt>
-        <dd><input type="text" name="menu_name" value=""></dd>
+        <dd><input type="text" name="menu_name" value="<?php echo $menu_name; ?>"></dd>
       </dl>
       <dl>
         <dt>Position</dt>
