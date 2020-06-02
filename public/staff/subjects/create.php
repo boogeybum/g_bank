@@ -11,7 +11,7 @@ if(is_post_request()) {
   $visible = $_POST['visible'] ?? '';
   
   echo "Form parameters<br />";
-  echo "Menu name: " . $menu_name . "<br />";
+  echo "Menu name: " . h($menu_name) . "<br />";
   echo "Position: " . $position . "<br />";
   echo "Visible: " . $visible . "<br />";
 
